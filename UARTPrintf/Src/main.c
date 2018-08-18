@@ -103,7 +103,12 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  double _x1 = 3.1415926;
+  float _x2 = 3.1415926;
+
   printf("Hello!\r\n");
+  printf("Double value:%f,sizeof:%lu\r\n",_x1,sizeof(double));
+  printf("Float value:%f,sizeof:%lu\r\n",_x2,sizeof(float));
 
   /* USER CODE END 2 */
 
@@ -196,7 +201,7 @@ static void MX_USART1_UART_Init(void)
 {
 
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 38400;
+  huart1.Init.BaudRate = 115200;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
